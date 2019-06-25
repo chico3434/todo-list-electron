@@ -4,5 +4,13 @@
   "description": "A todo application made on electron",
   "main": "main.js",
   "author": "Francisco Rubens",
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+    "start": "electron ."
+  },
+  "dependencies": {
+    "electron": "^5.0.5",
+    "electron-prebuilt": "^1.4.13",
+    "electron-reload": "^1.4.0"
+  }
 }
