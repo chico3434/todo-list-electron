@@ -2,12 +2,7 @@ var inputElement = document.getElementById('todo');
 var buttonElement = document.getElementById('add');
 var listElement = document.querySelector('#app ul');
 
-var todos = [];
-
-function add() {
-    todos.push(inputElement.value);
-    render();
-}
+var todos = JSON.parse(localStorage.getItem('list')) || [];
 
 function render() {
     listElement.innerHTML = '';
@@ -33,9 +28,25 @@ function render() {
     }
 }
 
+function add() {
+    todos.push(inputElement.value);
+    update();
+}
+
 function remove(index) {
     todos.splice(index, 1);
-    render();
+    update();
 }
+
+function save() {
+    localStorage.setItem('list', JSON.stringify(todos));
+}
+
+function update() {
+    render();
+    save();
+}
+
+render();
 
 buttonElement.onclick = add;
