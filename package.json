@@ -4,6 +4,9 @@
   "description": "A todo application made on electron",
   "main": "main.js",
   "author": "Francisco Rubens",
+  "repository": {
+    "url": "https://github.com/chico3434/todo-list-electron"
+  },
   "license": "MIT",
   "scripts": {
     "start": "electron ."
