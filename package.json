@@ -1,5 +1,5 @@
 {
-  "name": "todo",
+  "name": "todo-list-electron",
   "version": "1.0.0",
   "description": "A todo application made on electron",
   "main": "main.js",
